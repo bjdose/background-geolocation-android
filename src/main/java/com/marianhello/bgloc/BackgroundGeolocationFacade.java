@@ -214,6 +214,7 @@ public class BackgroundGeolocationFacade {
         permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
         if (Build.VERSION.SDK_INT >= 29){
             permissions.add(Manifest.permission.ACTIVITY_RECOGNITION);
+            permissions.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION);
         }
         permissionManager.checkPermissions(permissions, new PermissionManager.PermissionRequestListener() {
             @Override
@@ -414,6 +415,7 @@ public class BackgroundGeolocationFacade {
         permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
         if (Build.VERSION.SDK_INT >= 29){
             permissions.add(Manifest.permission.ACTIVITY_RECOGNITION);
+            permissions.add(Manifest.permission.ACCESS_BACKGROUND_LOCATION);
         }
         return hasPermissions(getContext(), (String[]) permissions.toArray(new String[permissions.size()]));
     }
